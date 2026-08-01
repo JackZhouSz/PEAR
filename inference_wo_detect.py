@@ -54,7 +54,7 @@ def inference( config_name, input_path=None, output_path=None):
     body_renderer = BodyRenderer("assets/SMPLX", 1024 , focal_length=24.0 ).cuda() 
 
     repo_id = "BestWJH/PEAR_models"  
-    filename = "ehm_model_stage1.pt"  
+    filename = "pear_model.pt"  
     ehm_basemodel = hf_hub_download(repo_id=repo_id, filename=filename, repo_type="model")
     ehm_model = Ehm_Pipeline(meta_cfg)
     _state=torch.load(ehm_basemodel, map_location='cpu', weights_only=True)
