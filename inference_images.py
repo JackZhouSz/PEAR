@@ -260,7 +260,7 @@ def inference( config_name, devices, input_path=None, output_path = None):
 
 
     repo_id = "BestWJH/PEAR_models"  
-    filename = "ehm_model_stage1.pt"  
+    filename = "pear_model.pt"  
 
     ehm_basemodel = hf_hub_download(repo_id=repo_id, filename=filename, repo_type="model")
     ehm_model = Ehm_Pipeline(meta_cfg)
